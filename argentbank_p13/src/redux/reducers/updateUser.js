@@ -3,7 +3,7 @@ const initialState = {
     lastName: undefined,
 };
 
-export const updateProfileReducer = (state = initialState, action) => {
+const updateProfileReducer = (state = initialState, action) => {
     if (action === "UPDATE_PROFILE_DATA") {
         return {
             ...state,
@@ -13,3 +13,5 @@ export const updateProfileReducer = (state = initialState, action) => {
     };
     return state;
 };
+
+export default updateProfileReducer;

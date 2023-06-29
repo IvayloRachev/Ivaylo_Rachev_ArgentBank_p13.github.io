@@ -1,8 +1,9 @@
-import { conmbineReducers } from "redux";
+import { combineReducers } from "redux";
 import loggedReducer from "./isLogged";
 import getUserReducer from "./getUser";
 
-export const allReducers = conmbineReducers({
+const allReducers = combineReducers({
     loggedReducer,
-    getUserReducer,
+    getUserReducer
 });
+export default allReducers;
