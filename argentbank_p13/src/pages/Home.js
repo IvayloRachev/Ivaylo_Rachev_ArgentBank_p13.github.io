@@ -12,19 +12,19 @@ export default function Home() {
                         <p className='subtitle'>No fees.</p>
                         <p className='subtitle'>No minimum deposit.</p>
                         <p className='subtitle'>High interest rates.</p>
-                        <p className='text'> Open a savings acount with Argent Bank today!</p>
+                        <p className='text'> Open a savings account with Argent Bank today!</p>
                     </section>
                 </div>
                 <section className='features'>
                     <div className='feature-item'>
                         <img src={iconChat} alt="Icon chat" className='feature-icon' />
                         <h3 className='feature-item-title'>You are our #1 priority</h3>
-                        <p>Need to talk to a representative? You can get in through our 24/7 chat
-                        or through a phone call in less than 5 minutes.</p>
+                        <p>Need to talk to a representative? You can get in touch through our
+                        24/7 chat or through a phone call in less than 5 minutes.</p>
                     </div>
                     <div className='feature-item'>
                         <img src={iconMoney} alt="Icon money" className='feature-icon' />
-                        <h3 className='feature-item-title'>More savings mean higher rates</h3>
+                        <h3 className='feature-item-title'>More savings means higher rates</h3>
                         <p>The more you save with us, the higher your interest rate will be!</p>
                     </div>
                     <div className='feature-item'>
