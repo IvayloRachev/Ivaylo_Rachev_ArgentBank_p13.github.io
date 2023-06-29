@@ -1,19 +1,18 @@
-import Home from './pages/Home';
-import Error from './pages/Error';
-import Footer from './components/Footer';
 import "./styles/style.css";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Home from "./pages/Home";
+import Error from "./pages/Error";
+import { Routes, Route } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
-      </Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<Error />} />
+      </Routes>
       <Footer />
     </div>
   );
