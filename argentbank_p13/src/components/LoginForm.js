@@ -49,8 +49,8 @@ export default function LoginForm() {
         if (token) {
             const dataUser = await getUser(token);
             console.log(dataUser);
-            dispatchEvent(getUserData(dataUser.body.firstName, dataUser.body.lastName));
-            dispatchEvent(loggedIn());
+            dispatch(getUserData(dataUser.body.firstName, dataUser.body.lastName));
+            dispatch(loggedIn());
             console.log(dataUser.body.firstName);
             console.log(dataUser.body.lastName);
             return navigate("/user");
