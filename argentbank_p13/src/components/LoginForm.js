@@ -57,6 +57,10 @@ export default function LoginForm() {
         }
     };
 
+    if (isLogged) {
+        return navigate("/user");
+    }
+
     return (
         <form onSubmit={handleSubmit}>
             <div className='input-wrapper'>
@@ -66,7 +70,7 @@ export default function LoginForm() {
             </div>
             <div className='input-wrapper'>
                 <label htmlFor="password">Password</label>
-                <input type="text" id="password" onChange={(e) => setPassword(e.target.value)} />
+                <input type="password" id="password" onChange={(e) => setPassword(e.target.value)} />
                 <p className='password_error'></p>
             </div>
             <div className='input-remember'>
