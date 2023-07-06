@@ -1,0 +1,47 @@
+swagger: "2.0"
+info: 
+  description: "ArgentBank API documentation for the transaction page: contains all available API endpoints in this codebase."
+  version: 1.0.0
+  title: "ArgentBank : API documentation for the transactions"
+  termsOfService: http://swagger.io/terms/
+host: localhost:3001
+basePath: /api/v1
+schemes:
+  - https
+  - http
+paths:
+  /transaction/{userId}/{month}:
+    get:
+      security:
+        - Bearer: []
+      tags:
+        - Transactions for current month
+      summary: An identified user can see all his transactions for the current month.
+      description: "API for fetching the transations in the current month for an identified user"
+      operationId: readAllTransactions
+      parametres:
+        - in: header
+          name: Authorization
+          description: "Attach Bearer JWT token"
+          type: string
+          required: true
+        - in: path
+          name: userId
+          required: true
+          type: integer
+          description: "An identified user's id"
+        - in: path
+          name: month
+          required: true
+          type: string
+          description: "Cuure,t month"
+      responses:
+        "200":
+          description: "Successfully get user's all transactions for the current month"
+          schema:
+            $ref: "#/definitions/Transaction"
+        "400":
+          description: "Invalid fields"
+        "500":
+          description: "Internal Server Error"
+
