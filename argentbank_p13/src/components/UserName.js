@@ -41,6 +41,7 @@ export default function UserName() {
                 className="input"
                 type="firstname"
                 id="firstname"
+                value= {newFirstName}
                 placeholder={dataUser.firstName}
                 onChange={(e) => {
                   setNewFirstName(e.target.value);
@@ -50,6 +51,7 @@ export default function UserName() {
                 className="input"
                 type="lastname"
                 id="lastname"
+                value= {newLastName}
                 placeholder={dataUser.lastName}
                 onChange={(e) => {
                   setNewLastName(e.target.value);
