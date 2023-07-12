@@ -74,8 +74,8 @@ export default function LoginForm() {
                 <p className='password_error'></p>
             </div>
             <div className='input-remember'>
-                <label for="remember-me">Remember me</label>
                 <input type="checkbox" id="remember-me" />
+                <label for="remember-me">Remember me</label>
             </div>
             <button className='sign-in-button'>Sign in</button>
             <p className='message_error'></p>
