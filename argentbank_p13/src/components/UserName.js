@@ -39,7 +39,7 @@ export default function UserName() {
             <div className="names-edit">
               <input
                 className="input"
-                type="firstname"
+                type="text"
                 id="firstname"
                 value= {newFirstName}
                 onChange={(e) => {
@@ -48,7 +48,7 @@ export default function UserName() {
               />
               <input
                 className="input"
-                type="lastname"
+                type="text"
                 id="lastname"
                 value= {newLastName}
                 onChange={(e) => {
