@@ -34,17 +34,17 @@ paths:
           name: month
           required: true
           type: string
-          description: "Cuure,t month"
+          description: "Cuurent month"
       responses:
         "200":
           description: "Successfully get user's all transactions for the current month"
           schema:
-            $ref: "#/definitions/Transaction"
-        "400":
-          description: "Invalid fields"
+            $ref: "#/definitions/Transactions"
+        "404":
+          description: "Requested Resource Not Found"
         "500":
           description: "Internal Server Error"
-  /transaction/create/{userID}:
+  /transaction/create/{userId}:
     post:
       security:
         - Bearer: []
@@ -69,12 +69,12 @@ paths:
           description: "Created transaction object"
           required: true
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
       responses:
         "200":
           description: "Successfully created a transaction!"
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
         "400":
           description: "Invalid Fields"
         "500":
@@ -108,9 +108,9 @@ paths:
         "200":
           description: "Successfully get an user's specific transaction!"
           schema:
-            $ref: "#/definitions/Transaction"
-        "400":
-          description: "Invalid Fields"
+            $ref: "#/definitions/Transactions"
+        "404":
+          description: "Requested Resource Not Found"
         "500":
           description: "Internal Server Error"
     put:
@@ -142,12 +142,12 @@ paths:
           description: "Updated transaction object"
           required: true
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
       responses:
         "200":
           description: "Successfully updated an user's specific transaction!"
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
         "400":
           description: "Invalid Fields"
         "500":
@@ -180,10 +180,10 @@ paths:
         "200":
           description: "Successfully delete an existent transaction!"
           schema:
-            $ref: "#/definitions/Transaction"
+            $ref: "#/definitions/Transactions"
         "400":
           description: "Invalid Fields"
-        "500"
+        "500":
           description: "Internal Server Error"
 securityDefinitions:
   Bearer:
