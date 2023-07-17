@@ -53,6 +53,7 @@
   .main-nav-item {
     text-decoration: none;
     margin-right: 0.5rem;
+    font-weight: 600;
   }
   
   .main-nav-item:hover {
@@ -297,4 +298,8 @@
     .transaction-button {
       width: 200px;
     }
+  }
+
+  .userHeader {
+    display: flex;
   }
