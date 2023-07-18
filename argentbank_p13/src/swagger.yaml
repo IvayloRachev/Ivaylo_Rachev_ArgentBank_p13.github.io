@@ -148,8 +148,8 @@ paths:
           description: "Successfully updated an user's specific transaction!"
           schema:
             $ref: "#/definitions/Transactions"
-        "400":
-          description: "Invalid Fields"
+        "404":
+          description: "Requested Resource Not Found"
         "500":
           description: "Internal Server Error"
     delete:
@@ -181,8 +181,8 @@ paths:
           description: "Successfully delete an existent transaction!"
           schema:
             $ref: "#/definitions/Transactions"
-        "400":
-          description: "Invalid Fields"
+        "404":
+          description: "Requested Resource Not Found"
         "500":
           description: "Internal Server Error"
 securityDefinitions:
