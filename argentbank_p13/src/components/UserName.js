@@ -14,6 +14,8 @@ export default function UserName() {
     const isLogged = useSelector((state) => state.loggedReducer);
     const dataUser = useSelector((state) => state.getUserReducer);
 
+   
+
     const dispatch = useDispatch();
 
     const handleChange = async () => {
@@ -41,7 +43,7 @@ export default function UserName() {
                 className="input"
                 type="text"
                 id="firstname"
-                value= {newFirstName}
+                placeholder= "Your first name"
                 onChange={(e) => {
                   setNewFirstName(e.target.value);
                 }}
@@ -50,7 +52,7 @@ export default function UserName() {
                 className="input"
                 type="text"
                 id="lastname"
-                value= {newLastName}
+                placeholder= "Your last name"
                 onChange={(e) => {
                   setNewLastName(e.target.value);
                 }}
