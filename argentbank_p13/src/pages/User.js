@@ -1,17 +1,15 @@
 import React from 'react';
 import UserName from '../components/UserName';
-import { useNavigate } from 'react-router';
 import { useSelector } from 'react-redux';
+import { Routes, Route } from 'react-router-dom'
+import Login from "./Login";
 
 export default function User() {
-    let navigate = useNavigate();
     const isLogged = useSelector((state) => state.loggedReducer);
 
-    if (!isLogged) {
-        return navigate("/login")
-    }
-
     return (
+        isLogged
+            ? (
         <main className='main bg-dark'>
             <UserName />
             <h2 className='sr-only'>Accounts</h2>
@@ -46,5 +44,7 @@ export default function User() {
                 </div>
             </section>
         </main>
+            )
+            : (<Routes><Route path='/*' element={<Login />} /></Routes>)
     )
 }
