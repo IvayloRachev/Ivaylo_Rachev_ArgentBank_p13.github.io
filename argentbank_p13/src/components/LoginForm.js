@@ -64,18 +64,18 @@ export default function LoginForm() {
     return (
         <form onSubmit={handleSubmit}>
             <div className='input-wrapper'>
-                <label for="username">Username</label>
+                <label htmlFor="username">Username</label>
                 <input type="text" id="username" onChange={(e) => setEmail(e.target.value)} />
                 <p className='email_error'></p>
             </div>
             <div className='input-wrapper'>
-                <label for="password">Password</label>
+                <label htmlFor="password">Password</label>
                 <input type="password" id="password" onChange={(e) => setPassword(e.target.value)} />
                 <p className='password_error'></p>
             </div>
             <div className='input-remember'>
                 <input type="checkbox" id="remember-me" />
-                <label for="remember-me">Remember me</label>
+                <label htmlFor="remember-me">Remember me</label>
             </div>
             <button className='sign-in-button'>Sign in</button>
             <p className='message_error'></p>
